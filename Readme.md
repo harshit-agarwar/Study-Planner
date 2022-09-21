@@ -27,9 +27,9 @@ This is a study planner designed and impemented by Harshit Agarwar for StrategyC
 
 
 
-#Considerations
+# Considerations
 
-##DataBase Design 
+## DataBase Design 
 
 In our database, there are two tables: one for user ids and passwords and the other for sessions.
 In the session, we choose title, subject, start time, and other attributes based on the question. In maxnum is a new field with a counter currnum that, when reached, prevents any other user from registering to the session.
@@ -37,7 +37,7 @@ In the session, we choose title, subject, start time, and other attributes based
 We use three fields in the User table database: username, email, and password. We do this to ensure that each username is unique because it is stored as a key value pair and to avoid user data clashes.
 
 
-##Security Considerations
+## Security Considerations
 
 * We can use Google authentication to ensure that no one else signs in and changes other sessions. 
 * Using a secure website host 
