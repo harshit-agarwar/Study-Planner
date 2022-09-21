@@ -1,0 +1,36 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Title : <%= session.title%>
+                    </h5>
+                    <p class="card-text">
+                        Subject : <%= session.subject%>
+                    </p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Start Date : <%= session.startDate%>
+                            </h5>
+                            <p class="card-text">
+                                End Date : <%= session.endDate%>
+                            </p>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        Max Number of participants : <%= session.maxNumber%>
+                    </div>
+                </div>
+                <% if( currentUser && campground.author.equals(currentUser._id)) {%>
+                    <div class="card-body">
+                        <a class="card-link btn btn-info" href="/sessions/<%=session._id%>/edit">Edit</a>
+                        <form class="d-inline" action="/sessions/<%=session._id%>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>

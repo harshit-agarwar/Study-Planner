@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Edit Study Session</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/sessions/<%=session._id%>?_method=PUT" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="session[title]"
+                        value="<%=session.title %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="subject">Subject</label>
+                    <input class="form-control" type="text" id="subject" name="session[subject]"
+                        value="<%=session.subject %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="startDate">Start Date</label>
+                    <input class="form-control" type="date" id="startDate" name="session[startDate]"
+                        value="<%=session.startDate %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="endDate">End Date</label>
+                    <input class="form-control" type="date" id="endDate" name="session[endDate]"
+                        value="<%=session.endDate %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="max">Max number of participants</label>
+                    <input class="form-control" type="number" id="max" name="session[maxNumber]"
+                        value="<%=session.maxNumber %>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-info">Update Study Session</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
